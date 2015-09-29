@@ -1,0 +1,15 @@
+{
+  "name": "test-task-jwt",
+  "version": "0.0.1",
+  "authors": [
+    "Vladimir Tagai"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-jwt": "~0.0.9",
+    "angular-socket-io": "~0.7.0",
+    "bootstrap": "~3.3.5"
+  }
+}

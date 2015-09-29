@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-socket-io/socket.js"></script>
+    <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="socket.io-client/socket.io.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="JwtApp">
+    <div class="row" style="margin-top: 100px;" ng-controller="MainController">
+        <div class="col-md-3 col-md-offset-1">
+            <p class="lead">Login with any data. Token will be actual for ten minutes.</p>
+            <p class="lead">Socket output will be printed in console.</p>
+            <p class="lead">
+                <span>Here is GET /test request. It sends token via Authorization header.</span>
+                <a href="javascript:void(0)" ng-click="testRequest()">Try it!</a>
+            </p>
+            <div class="lead text-warning text-center">Response</div>
+            <pre> {{lastRequestedData | json}} </pre>
+        </div>
+        <div class="col-md-4">
+            <form ng-submit="submitForm()">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" ng-model="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" ng-model="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
