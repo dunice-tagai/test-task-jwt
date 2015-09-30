@@ -1,5 +1,11 @@
 # test-task-jwt
 
+
+```bash
+npm i
+bower i
+```
+
 Here are two kinds of implementation of jwt socket authorization.
 First one (custom) satisfies to the task description at all. <br/>
 To run application in this mode, just run
@@ -10,13 +16,13 @@ it only emits event `connect` or `error`. This one I've implemented first and de
 <br/>
 To run application in this mode: <br/>
 1)  
-  ```javascript
+  ```bash
   export SOCKET_AUTH_TYPE=socketjwt
   node app.js 
   ```
 2) in `/public/js/app.js`, uncomment two listeners. <br/>
 
 That's it.
-
+Socket responses is displayed in console.
 
 
